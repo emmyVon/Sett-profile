@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+h2{
+    color: purple;
+}
+
+.container {
+    max-width: 1176px;
+    margin-inline: auto;
+    width: 90vw;
+}
+nav{
+    background-color: lightskyblue;
+    height: 2rem;
+}
+section{
+    margin-top: 1rem;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+nav ul{
+    display: flex;
+    gap: 14px;
+}
+nav li{
+    cursor: pointer;
+}
+nav li:hover{
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+}
+.intro-con{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.intro img{
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+}
+article{
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+.skill-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.skills article{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 3px 3px black;
+    gap: 1rem;
+    align-items: center;
+}
+.skills IMG{
+    height: 2rem;
+    width: 2rem;
+}
+.project-con{
+    padding-left: 2rem;
+}
+.dis{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
+    overflow-wrap: break-word;
+    gap:0.2rem
+}
+.dis article{
+    min-height: 2rem;
+}
+.rec-input, form{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 1rem;
+}
+
+.alert{
+    padding: 1.5rem;
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+.showalert{
+    position: relative;
+    opacity: 0.6;
+}
+.arrow-up{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background-color: blueviolet;
+    padding:0.5rem ;
+    border-radius:50%;
+}
+.fa-arrow-up{
+    color: white;
+}
+
+@media screen and (max-width:760px){
+.container{
+    width:98
+}
+.intro img{
+    display: none;
+}
+.intro-con{
+    grid-template-columns: 1fr;
+}
+.skill-con,.dis{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+}
